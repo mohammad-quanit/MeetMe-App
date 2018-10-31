@@ -1,0 +1,81 @@
+.Meeting{
+  background-color: #FFF;
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  padding-top: 10%;
+  font-family: Tahoma;
+  font-size: calc(10px + 2vmin);
+  padding: 30px;
+  overflow-y: hidden; 
+  overflow-x: hidden; 
+  border: 10px solid #ff0000;
+}
+
+.stack {
+  position: relative;
+  height: 400px;
+  width: 300px;
+  margin: auto;
+}
+
+.stack .card {
+  width: 100%;
+  height: 450px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #000;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.slider{
+  width: 90%;
+  height: 60%;
+  margin: 15px;
+}
+
+.thumbnails{
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 100%;
+}
+
+.fullName{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+}
+
+.nickname{
+  color: grey;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.buttons-parent{
+  width: inherit;
+  height: auto;
+  border-top: 2px solid lightgrey;
+}
+
+.buttons{
+  width: 40px !important;
+  border-radius: 100%;
+  margin-top: 7px;
+}
+
+.right{
+  margin-right: 50%;
+}
+
+.images{
+  width: 265px !important;
+  height: 267px !important;
+}
+
+.navigators{
+  display: none !important;
+}
+

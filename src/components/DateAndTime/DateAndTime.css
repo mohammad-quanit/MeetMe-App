@@ -1,0 +1,13 @@
+.DateAndTime{
+  background-color: #FFF;
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  padding-top: 10%;
+  font-family: Tahoma;
+  font-size: calc(10px + 2vmin);
+  padding: 30px;
+  overflow-y: hidden; 
+  overflow-x: hidden; 
+  border: 10px solid #ff0000;
+}

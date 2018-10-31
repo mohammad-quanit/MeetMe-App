@@ -1,0 +1,30 @@
+.UserPhotos{
+  background-color: #FFF;
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  padding-top: 7%;
+  font-family: Tahoma;
+  font-size: calc(10px + 2vmin);
+  border: 10px solid #ff0000;
+}
+img {
+  width: 50%;
+}
+@media only screen and (max-width: 500px) {
+  img {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+}
+.images-div{
+  width:50%;
+  
+}
+
+.images-box{
+  width: 40%; 
+  min-height: 100px;
+  border: 1px black solid;
+  border-radius: 5px;
+}

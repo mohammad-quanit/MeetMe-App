@@ -1,0 +1,28 @@
+.Details{
+  background-color: #FFF;
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  padding-top: 10%;
+  font-size: calc(10px + 2vmin);
+  font-family: Tahoma;
+  border: 10px solid #ff0000;
+}
+.form-group{
+  width: 40%;
+  align-content: center
+}
+img {
+  width: 50%;
+}
+
+@media only screen and (max-width: 500px) {
+  img {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .form-group{
+    width: 80%;
+    align-content: center
+  }
+}

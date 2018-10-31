@@ -1,0 +1,26 @@
+.Login{
+  background-color: #FFF;
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  padding-top: 10%;
+  font-family: Tahoma;
+  font-size: calc(10px + 2vmin);
+  border: 10px solid #ff0000;
+}
+
+.loader{
+  width: 30px;
+  height: 30px;
+}
+
+img {
+  width: 50%;
+}
+@media only screen and (max-width: 500px) {
+  img {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  
+}

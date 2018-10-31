@@ -1,0 +1,20 @@
+.location-div{
+  background-color: #FFF;
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  padding-top: 10%;
+  font-family: Tahoma;
+  font-size: calc(10px + 2vmin);
+  padding: 30px;
+  border: 10px solid #ff0000;
+}
+img {
+  width: 50%;
+}
+@media only screen and (max-width: 500px) {
+  img {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+}
