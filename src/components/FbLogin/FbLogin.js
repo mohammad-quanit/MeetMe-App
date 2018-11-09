@@ -30,11 +30,11 @@ export default class FbLogin extends React.Component {
       .auth()
       .signInWithPopup(provider)
       .then((result) => {
-        swal({
-          title: "Login Successfully",
-          icon: "success",
-          button: "Ok", 
-        });
+        // swal({
+        //   title: "Login Successfully",
+        //   icon: "success",
+        //   button: "Ok",
+        // });
         localStorage.setItem('user_id', result.user.uid);
         localStorage.setItem('fullName', result.user.displayName);
         this.setState({
@@ -61,8 +61,10 @@ export default class FbLogin extends React.Component {
       <div className="Login">
         {/* {user && setTimeout(() => { this.props.history.push('/dashboard') }, 1000)} */}
         <img src={Logo} alt="Logo" />
+        <h1 className="text-light">Welcome</h1>
+        <p className="text-light">MeetMe is the best place to Discover & meet new People</p>
         <br />
-        <button type="button" id="btnFbLogin" className="btn btn-primary mt-5 px-5" onClick={this.login}>Login with Facebook</button>
+        <button type="button" id="btnFbLogin" className="btn btn-info px-5" onClick={this.login}>Connect with Facebook</button>
         {login && <Redirect to={{ pathname: "/details" }} />}
       </div>
     );

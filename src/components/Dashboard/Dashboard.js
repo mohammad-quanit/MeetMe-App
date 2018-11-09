@@ -71,9 +71,9 @@ export default class UserDetails extends React.Component {
         <div className='float-left'><img src={Logo} alt='logo' /></div>
         <br />
         <div>
-          <h3 className='text-dark'>{name}, you haven't done any meeting yet</h3>
+          <h3 className="text-light">{name}, you haven't done any meeting yet</h3>
           <br />
-          <NavLink to='/meeting'><button className='btn btn-primary px-5'>Set a Meeting</button></NavLink>
+          <NavLink to='/meeting'><button className='btn btn-info px-5'>Set a Meeting</button></NavLink>
         </div>
       </div>
     );

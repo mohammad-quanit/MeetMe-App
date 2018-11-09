@@ -1,5 +1,5 @@
 .MeetingPoint{
-  background-color: #FFF;
+  background-color: #6E4B92;
   width: 100%;
   min-height: 100vh;
   text-align: center;
@@ -9,6 +9,14 @@
   padding: 30px;
   overflow-y: hidden; 
   overflow-x: hidden; 
-  border: 10px solid #ff0000;
+  /* border: 10px solid #ff0000; */
 }
 
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; 
+}

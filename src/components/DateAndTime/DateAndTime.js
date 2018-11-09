@@ -14,6 +14,8 @@ export default class DateAndTime extends React.Component {
 	}
 
 	doneMeeting() {
+		const anotherUser = JSON.parse(localStorage.getItem('MatchedUsers'));
+		const anotherUserName = anotherUser[0].fullName
 		const name = localStorage.getItem('fullName');
 		const user_id = localStorage.getItem('user_id');
 		const parseMeetingUserId = JSON.parse(localStorage.getItem('MeetingUser'));
@@ -27,7 +29,7 @@ export default class DateAndTime extends React.Component {
 
 		swal({
 			title: "Are you sure?",
-			text: name + " Did You Really Want To Meet Him/Her.",
+			text: `${name}, Did You Really Want To Meet ${anotherUserName}`,
 			icon: "warning",
 			buttons: true,
 			dangerMode: true,
@@ -35,6 +37,7 @@ export default class DateAndTime extends React.Component {
 			.then((willDelete) => {
 				if (willDelete) {
 					firebase.firestore().collection('meetings').add({
+						anotherUserName,
 						user_id,
 						meetingUserId,
 						meetingLocationName,
@@ -63,7 +66,7 @@ export default class DateAndTime extends React.Component {
 				<img src={Logo} alt='logo' />
 				<input type="date" className="form-control col-md-12 mt-5" id="txtDate" />
 				<input type="time" className="form-control col-md-12 mt-2" id="txtTime" />
-				<button className="btn btn-primary float-right mt-3 px-5" onClick={this.doneMeeting}>Done</button>
+				<button className="btn btn-info float-right mt-3 px-5" onClick={this.doneMeeting}>Done</button>
 			</div>
 		)
 	}

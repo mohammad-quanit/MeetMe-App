@@ -64,11 +64,11 @@ export default class Beverages extends React.Component {
     }).then(resp => {
       localStorage.setItem('beverages',beverages);
       localStorage.setItem('meetingTimings',meetingTimings);
-      swal({
-        title: "Beverages Added Successfully",
-        icon: "success",
-        button: "Ok", 
-      });
+      // swal({
+      //   title: "Beverages Added Successfully",
+      //   icon: "success",
+      //   button: "Ok", 
+      // });
       this.props.history.push("/location");
     }).catch(err => {
       swal({
@@ -89,33 +89,33 @@ export default class Beverages extends React.Component {
       <div className="beverages">
         <img src={Logo} alt="Logo" />
         <div className='row w-75 mx-auto mt-3'>
-          <div className='col-md-5 border border-dark rounded mx-auto'>
-            <p className="text-dark"><u>Select Beverages</u></p>
-            <label className="text-dark container">Juice
+          <div className='col-md-5 border border-light rounded mx-auto'>
+            <p className="text-light"><u>Select Beverages</u></p>
+            <label className="text-light container">Juice
               <input type="checkbox" name="juice" onChange={this.beverageSelectors} value="juice" />
               <span className="checkmark"></span>
             </label>
-            <label className="text-dark container">Coffee
+            <label className="text-light container">Coffee
               <input type="checkbox" name="coffee" onChange={this.beverageSelectors} value="coffee" />
               <span className="checkmark"></span>
             </label>
-            <label className="text-dark container">Cocktail
+            <label className="text-light container">Cocktail
               <input type="checkbox" name="cocktail" onChange={this.beverageSelectors} value="cocktail" />
               <span className="checkmark"></span>
             </label>
           </div>
           &nbsp;
-          <div className='col-md-5 border border-dark rounded mx-auto'>
-            <p className="text-dark"><u>Select Durations</u></p>
-            <label className="text-dark container">20 Min
+          <div className='col-md-5 border border-light rounded mx-auto'>
+            <p className="text-light"><u>Select Durations</u></p>
+            <label className="text-light container">20 Min
               <input type="checkbox" name="20 Min" onChange={this.meetingTimeHandle} value='20 Min' />
               <span className="checkmark"></span>
             </label>
-            <label className="text-dark container">60 Min
+            <label className="text-light container">60 Min
               <input type="checkbox" name="60 Min" onChange={this.meetingTimeHandle} value='60 Min' />
               <span className="checkmark"></span>
             </label>
-            <label className="text-dark container">120 Min
+            <label className="text-light container">120 Min
               <input type="checkbox" name="120 Min" onChange={this.meetingTimeHandle} value='120 Min' />
               <span className="checkmark"></span>
             </label>
@@ -123,7 +123,7 @@ export default class Beverages extends React.Component {
         </div>
         <br />
         {/* <NavLink to={{ pathname: "/location" }}><button className='btn btn-primary px-5'>Next</button></NavLink> */}
-        <button id="btnAddBeverages" className='btn btn-primary px-5' onClick={this.sendBeverages}>Next</button>
+        <button id="btnAddBeverages" className='btn btn-info px-5' onClick={this.sendBeverages}>Next</button>
       </div>
     );
   }

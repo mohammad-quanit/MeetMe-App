@@ -1,5 +1,5 @@
 .location-div{
-  background-color: #FFF;
+  background-color: #6E4B92;
   width: 100%;
   min-height: 100vh;
   text-align: center;
@@ -7,7 +7,7 @@
   font-family: Tahoma;
   font-size: calc(10px + 2vmin);
   padding: 30px;
-  border: 10px solid #ff0000;
+  /* border: 10px solid #ff0000; */
 }
 img {
   width: 50%;

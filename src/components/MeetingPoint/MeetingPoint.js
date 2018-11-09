@@ -19,6 +19,8 @@ export default class MeetingPoint extends React.Component {
 		this.search = this.search.bind(this);
 		this.select = this.select.bind(this);
 		this.selectNearest = this.selectNearest.bind(this);
+		this.directionNearest = this.directionNearest.bind(this);
+		this.direction = this.direction.bind(this);
 
 		//Getting Coordinates
 		const user_id = localStorage.getItem('user_id');
@@ -103,6 +105,20 @@ export default class MeetingPoint extends React.Component {
 			});
 	}
 
+	direction(index){
+		const {location} = this.state;
+		// console.log(location[index]);
+		const meetingLocation = {
+			meetingLocationName : location[index].name,
+			meetingLocationCoords : {
+				latitude : location[index].location.lat,
+				longitude : location[index].location.lng
+			}
+		}
+		localStorage.setItem('MeetingLocation',JSON.stringify(meetingLocation));
+		this.props.history.push("/direction");
+	}
+
 	selectNearest(ind){
 		const nearestLocation = JSON.parse(localStorage.getItem('nearestLocations'));
 		const meetingLocation = {
@@ -136,33 +152,81 @@ export default class MeetingPoint extends React.Component {
 			});
 	}
 
+	directionNearest(ind){
+		const nearestLocation = JSON.parse(localStorage.getItem('nearestLocations'));
+		// console.log(nearestLocation[ind]);
+		const meetingLocation = {
+			meetingLocationName : nearestLocation[ind].name,
+			meetingLocationCoords : {
+				latitude : nearestLocation[ind].location.lat,
+				longitude : nearestLocation[ind].location.lng
+			}
+		}
+		// console.log(meetingLocation);
+
+		localStorage.setItem('MeetingLocation',JSON.stringify(meetingLocation));
+		this.props.history.push("/direction");
+	}
+
 	render() {
 		const {  flag , location } = this.state;
 		const nearestLocation = JSON.parse(localStorage.getItem('nearestLocations'));
 		return (
-			<div className="text-dark MeetingPoint">
+			<div className="text-light MeetingPoint">
 				<img src={Logo} alt='logo' />
 				<input type="text" placeholder="Search Location" className="form-control col-md-12 mt-5" id="txtSearch" />
 				<button className="btn btn-primary float-right mt-2" onClick={this.search}>Search</button>
 				<br />
 				{flag && location.map((value,index) => {
-				return	<div className="card mt-5">
-						<div className="card-body">
-							<h6 className="card-title float-left">{value.name}</h6>
-							<button className="btn btn-success float-right btn-sm" onClick={this.select.bind(this, index)}>Select</button>
+				return	<div className="card mt-5 border border-0">
+						<div className="card-body" style={{ backgroundColor: '#6E4B92' }}>
+							<h6 className="text-light card-title float-left">{value.name}</h6>
+							<button className="btn btn-danger float-right btn-sm ml-1" onClick={this.direction.bind(this, index)}>Direction</button>
+							<button className="btn btn-success float-right btn-sm px-3" onClick={this.select.bind(this, index)}>Select</button>
 						</div>
 					</div>
 				})}
 
 				{!flag && nearestLocation.map((val,ind) => {
-				return	<div className="card mt-5">
-						<div className="card-body">
-							<h6 className="card-title float-left">{val.name}</h6>
-							<button className="btn btn-success float-right btn-sm" onClick={this.selectNearest.bind(this, ind)}>Select</button>
-						</div>
+				return	<div className="card mt-5 border border-0">
+						<div className="card-body" style={{ backgroundColor: '#6E4B92' }}>
+							<h6 className="text-light card-title float-left">{val.name}</h6>
+							<button className="btn btn-danger float-right btn-sm ml-1" onClick={this.directionNearest.bind(this, ind)}>Direction</button>
+							<button className="btn btn-success float-right btn-sm px-3" onClick={this.selectNearest.bind(this, ind)}>Select</button>						
+						</div>					
 					</div>
 				})}
 			</div>
 		)
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

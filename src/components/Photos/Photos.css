@@ -1,12 +1,11 @@
 .UserPhotos{
-  background-color: #FFF;
+  background-color: #6E4B92;
   width: 100%;
   min-height: 100vh;
   text-align: center;
-  padding-top: 7%;
+  padding-top: 10%;
   font-family: Tahoma;
   font-size: calc(10px + 2vmin);
-  border: 10px solid #ff0000;
 }
 img {
   width: 50%;
@@ -19,12 +18,15 @@ img {
 }
 .images-div{
   width:50%;
-  
+}
+.btn{
+  font-family: Tahoma;
+  background-color: #3B5998;
+  color: white;
+  border: 1px solid white;
 }
 
 .images-box{
   width: 40%; 
-  min-height: 100px;
-  border: 1px black solid;
-  border-radius: 5px;
+  min-height: 100px
 }

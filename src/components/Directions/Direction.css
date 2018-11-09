@@ -1,0 +1,31 @@
+.Directions{
+  background-color: #6E4B92;
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  padding-top: 10%;
+  font-family: Tahoma;
+  font-size: calc(10px + 2vmin);
+  padding: 20px;
+  overflow-y: hidden; 
+  overflow-x: hidden; 
+}
+
+.loadingElement{
+  height: 400px;
+}
+
+.containerElement{
+  width: 100%;
+}
+
+.mapElement{
+  height: 600px;
+  width: 80%;
+}
+@media screen and (max-width: 500px) {
+  .mapElement{
+    height: 600px;
+    width: 100%;
+  }
+}

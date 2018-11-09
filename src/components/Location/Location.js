@@ -104,7 +104,7 @@ export default class CurrentLocation extends React.Component {
     // var user = JSON.parse(localStorage.getItem('user'));
     // user['coords'] = coords;
     // localStorage.setItem('user', JSON.stringify(user));
-    
+    console.log(coords)
     return (
       <div className='location-div'>
         <img src={Logo} alt="Logo" />
@@ -124,7 +124,7 @@ export default class CurrentLocation extends React.Component {
         )}
         <br />
         {/* <NavLink to={{ pathname: "/dashboard" }}><button className='btn'>Next</button></NavLink> */}
-        <button id="btnAddLocation" onClick={this.submitData} className='btn btn-primary px-5'>Done</button>
+        <button id="btnAddLocation" onClick={this.submitData} className='btn btn-info px-5'>Done</button>
       </div>
     );
   }

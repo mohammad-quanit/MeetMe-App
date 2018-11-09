@@ -1,5 +1,5 @@
 .DateAndTime{
-  background-color: #FFF;
+  background-color: #6E4B92;
   width: 100%;
   min-height: 100vh;
   text-align: center;
@@ -9,5 +9,4 @@
   padding: 30px;
   overflow-y: hidden; 
   overflow-x: hidden; 
-  border: 10px solid #ff0000;
 }

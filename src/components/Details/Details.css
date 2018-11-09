@@ -1,12 +1,11 @@
 .Details{
-  background-color: #FFF;
+  background-color: #6E4B92;
   width: 100%;
   min-height: 100vh;
   text-align: center;
   padding-top: 10%;
   font-size: calc(10px + 2vmin);
   font-family: Tahoma;
-  border: 10px solid #ff0000;
 }
 .form-group{
   width: 40%;
@@ -25,4 +24,10 @@ img {
     width: 80%;
     align-content: center
   }
+}
+.btn{
+  font-family: Tahoma;
+  background-color: #3B5998;
+  color: white;
+  border: 1px solid white;
 }

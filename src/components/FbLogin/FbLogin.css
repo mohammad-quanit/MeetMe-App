@@ -1,19 +1,13 @@
 .Login{
-  background-color: #FFF;
+  background-color: #6E4B92;
   width: 100%;
   min-height: 100vh;
   text-align: center;
   padding-top: 10%;
   font-family: Tahoma;
   font-size: calc(10px + 2vmin);
-  border: 10px solid #ff0000;
+  /* border: 10px solid #ff0000; */
 }
-
-.loader{
-  width: 30px;
-  height: 30px;
-}
-
 img {
   width: 50%;
 }
@@ -22,5 +16,10 @@ img {
     width: 100%;
     padding-bottom: 20px;
   }
-  
+}
+.btn{
+  font-family: Tahoma;
+  background-color: #3B5998;
+  color: white;
+  border: 1px solid white;
 }

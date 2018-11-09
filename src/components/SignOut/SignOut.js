@@ -22,7 +22,7 @@ export default class SignOutButton extends React.Component {
     return (
       <div>
         {/* {!this.state.login && console.log(this.props)} */}
-        <NavLink to='/'><button className="btn btn-danger float-right" onClick={this.signOut}>Logout</button></NavLink>
+        <NavLink to='/'><button className="btn btn-info float-right" onClick={this.signOut}>Logout</button></NavLink>
       </div>
     );
   }

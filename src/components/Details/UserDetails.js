@@ -46,11 +46,11 @@ export default class UserDetails extends React.Component {
       phone,
       uid : user_id
     }).then(res => {
-      swal({
-        title: "Details Added Successfully",
-        icon: "success",
-        button: "Ok", 
-      });
+      // swal({
+      //   title: "Details Added Successfully",
+      //   icon: "success",
+      //   button: "Ok", 
+      // });
       localStorage.setItem('nickname',nickname);
       localStorage.setItem('phone',phone);
       this.props.history.push("/photos");
@@ -73,13 +73,13 @@ export default class UserDetails extends React.Component {
     return (
       <div className="Details">
         <img src={Logo} alt="Logo" />
-        <p className="text-dark">Welcome, <b>{username}</b></p>
+        <p className="text-light">Welcome, <b>{username}</b></p>
         <br />
         <form className="form-group mx-auto">
           <input required className="form-control mb-3" type="text" placeholder="Enter Nickname" onChange={(e) => this.setState({ nickname: e.target.value })} />
           <input required className="form-control mb-3" type="tel" placeholder="Enter Phone" onChange={(e) => this.setState({ phone: e.target.value })} />      
           {nickname && phone &&
-            <span id="btnAddDetails" className="btn btn-primary px-5" onClick={this.sendUserDetails}>Next</span>
+            <span id="btnAddDetails" className="btn btn-info px-5" onClick={this.sendUserDetails}>Next</span>
           }
           {/* {nickname && phone && <NavLink to={{ pathname: "/photos" }} >
             <span className="btn btn-primary px-5">Next</span>

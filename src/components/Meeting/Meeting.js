@@ -54,8 +54,8 @@ export default class Meeting extends React.Component {
 	}
 
 	componentDidMount() {
-		swal("Swipe Left or Click Left Button To See More Users & Swipe Right or Click Right Button To Meet Him/Her.", {	
-		});	
+		swal("Swipe Left or Click Left Button To See More Users & Swipe Right or Click Right Button To Meet Him/Her.", {
+		});
 	}
 
 	remove(index) {
@@ -152,8 +152,8 @@ export default class Meeting extends React.Component {
 		// console.log(dummyUsers)
 
 		return (
-			<div className="text-dark Meeting">
-				{/* <img src={Logo} alt='logo' /> */}
+			<div className="text-light Meeting">
+				<img src={Logo} alt='logo' />
 
 				<Swing
 					config={{
@@ -164,32 +164,66 @@ export default class Meeting extends React.Component {
 					setStack={stack => this.setState({ stack: stack })}
 					ref="stack"
 				>
-
 					{data.map((value, index) => {
-						return <div className="card" ref="card1" throwout={e => this.swiped(e, index)} id={"parent" + index}>
-							<div className="slider">
-								<img className="images" src={value.userImages[0]} alt="First slide" />
+						return (
+							<div className="card" ref="card1" throwout={e => this.swiped(e, index)} id={"parent" + index}>
+								<div id="demo" className="carousel slide mt-3" data-ride="carousel">
+
+									{/* <!-- Indicators --> */}
+									<ul className="carousel-indicators">
+										<li data-target="#demo" data-slide-to="0" className="active"></li>
+										<li data-target="#demo" data-slide-to="1"></li>
+										<li data-target="#demo" data-slide-to="2"></li>
+									</ul>
+
+									{/* <!-- The slideshow --> */}
+									<div className="carousel-inner slider">
+										<div className="carousel-item active">
+											<img className="rounded" style={{width: "100%", height: "400px", marginRight: "280px", border: "0"}} src={value.userImages[0]} alt="userimages" />
+										</div>
+										<div className="carousel-item">
+											<img className="rounded" style={{width: "100%", height: "400px", marginRight: "280px", border: "0"}} src={value.userImages[1]} alt="userimages" />
+										</div>
+										<div className="carousel-item">
+											<img className="rounded" style={{width: "100%", height: "400px", marginRight: "280px", border: "0"}} src={value.userImages[2]} alt="userimages" />
+										</div>
+									</div>
+
+									{/* <!-- Left and right controls --> */}
+									<a className="carousel-control-prev" href="#demo" data-slide="prev">
+										<span className="carousel-control-prev-icon"></span>
+									</a>
+									<a className="carousel-control-next" href="#demo" data-slide="next">
+										<span className="carousel-control-next-icon"></span>
+									</a>
+
+								</div>
+								<h4 className="fullName mt-3 text-dark">{value.fullName}</h4>
+								<h6 className="nickname text-dark">{value.nickname}</h6>
+								<div className="buttons-parent mt-3">
+									<button className="btn btn-danger buttons right" onClick={this.remove.bind(this, index)}><i className="fa fa-times"></i></button>
+									<button className="btn btn-success buttons" onClick={this.meet.bind(this, index)}><i className="fas fa-check"></i></button>
+								</div>
 							</div>
-							<h4 className="fullName mt-3">{value.fullName}</h4>
-							<h6 className="nickname">{value.nickname}</h6>
-							<div className="buttons-parent mt-3">
-								<button className="btn btn-danger buttons right" onClick={this.remove.bind(this, index)}><i class="fa fa-times"></i></button>
-								<button className="btn btn-success buttons" onClick={this.meet.bind(this, index)}><i class="fas fa-check"></i></button>
-							</div>
-						</div>
-					})}		
+						)
+					})}
 
 				</Swing>
-
+				<br />
 			</div>
 		);
 	}
 }
 
+
+
+// <div className="slider">
+// 									<img className="images" src={value.userImages[0]} alt="First slide" />
+// 								</div>
 {/* <div className="card" ref="card1" throwout={e => this.swiped(e)}>
 						<div className="slider">
 							<div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" data-interval="false">
-								<ol class="carousel-indicators">
+								<ol className="carousel-indicators">
 									<li data-target="#carouselExampleIndicators" data-slide-to="0" className="active thumbnails"></li>
 									<li data-target="#carouselExampleIndicators" data-slide-to="1" className="thumbnails"></li>
 									<li data-target="#carouselExampleIndicators" data-slide-to="2" className="thumbnails"></li>
@@ -218,7 +252,7 @@ export default class Meeting extends React.Component {
 						<h4 className="fullName mt-3">Abdul Samad</h4>
 						<h6 className="nickname">Samad</h6>
 						<div className="buttons-parent mt-3">
-							<button className="btn btn-danger buttons right"><i class="fa fa-times"></i></button>
+							<button className="btn btn-danger buttons right"><i className="fa fa-times"></i></button>
 							<button className="btn btn-success buttons"><i class="fas fa-check"></i></button>
 						</div>
 					</div> */}

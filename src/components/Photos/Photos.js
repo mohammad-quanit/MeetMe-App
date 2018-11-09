@@ -112,7 +112,7 @@ class Photos extends React.Component {
     return (
       <div className="UserPhotos">
         <img src={Logo} alt="Logo" />
-        <p className="text-dark">Hey <b>{username}, ({nickname})</b> Select Atleast 3 Photos</p>
+        <p className="text-light">Hey <b>{username}, ({nickname})</b> Select Atleast 3 Photos</p>
 
         {/* image uploader Component */}
         <div className="images-box mx-auto">
@@ -127,7 +127,7 @@ class Photos extends React.Component {
           {pictures.map(value => {
             return (
               <div key={value.name}>
-                <small style={{ fontSize: '10px' }} className='text-dark'>{value.name}</small>
+                <small style={{ fontSize: '10px' }} className='text-light'>{value.name}</small>
               </div>)
           })}
         </div>
@@ -135,10 +135,10 @@ class Photos extends React.Component {
 
         {/* validating pictures length */}
         {<NavLink activeStyle={{ color: "black" }} to="/beverages">
-          {button && <button type="button" className="btn btn-primary px-5">Next</button>}
+          {button && <button type="button" className="btn btn-success px-5">Next</button>}
         </NavLink>
         }
-        {!button && <button id="btnUploadImages" className="btn btn-success px-5" onClick={this.uploadImages}>Upload Images</button>}
+        {!button && <button id="btnUploadImages" className="btn btn-info px-5" onClick={this.uploadImages}>Upload Images</button>}
       </div>
     );
   }
